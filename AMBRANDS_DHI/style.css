@@ -232,7 +232,7 @@ body {
   .image-right .container .section__main {
     order: -1;
   }
-  .image-right .section__media {
+  .image-right:not([data-section="2"]) .section__media {
     padding-right: 20%;
   }
   .image-left .section__media {
@@ -247,7 +247,7 @@ body {
 }
 
 @media (min-width: 64em) {
-  .image-right .section__media {
+  .image-right:not([data-section="2"]) .section__media {
     padding-right: 35%;
   }
   .image-left .section__media {
@@ -262,7 +262,7 @@ body {
 }
 
 @media (min-width: 75em) {
-  .image-right .section__media {
+  .image-right:not([data-section="2"]) .section__media {
     padding-right: 40%;
   }
   .image-left .section__media {
@@ -519,6 +519,17 @@ div[class*=".aspect-"] {
 .aspect-76-112 {
   aspect-ratio: 76/112;
   /* background: lightblue; */
+}
+.aspect-112-76 {
+  aspect-ratio: 112/76;
+  background: lightblue;
+}
+
+.image-2 img {
+  height: 114%;
+  top: auto;
+  bottom: -6%;
+  left: -17%;
 }
 
 .image-5 img {
