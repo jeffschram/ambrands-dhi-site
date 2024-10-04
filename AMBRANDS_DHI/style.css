@@ -297,19 +297,19 @@ body {
   }
   /* TEST */
   .section__main {
-    background: lightblue;
+    /* background: lightblue; */
   }
   .section__media {
-    background: lightgreen;
+    /* background: lightgreen; */
   }
   .section__body h1,
   h2 {
-    background: lightcoral;
+    /* background: lightcoral; */
   }
   .large .section__body h1,
   .large .section__body h2 {
     font-size: 2.9rem !important;
-    color: purple;
+    /* color: purple; */
   }
 
   /* Home */
