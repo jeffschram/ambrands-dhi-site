@@ -1,5 +1,32 @@
 console.log("main.js");
 
+// Carousel
+// --------------------------------------------
+
+$(document).ready(function () {
+  $(".cards").slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+    ],
+  });
+});
+
+// Scroll behavior
+// --------------------------------------------
+
 // Get the site header element
 const siteHeader = document.querySelector(".site-header");
 
