@@ -23,11 +23,12 @@
   --h2-weight: 700;
   --h2-letter-spacing: -0.015em;
   --h2-margin: 1rem;
-  --h3-font: 1.5rem / 1.25 var(--sans);
+  --h3-font: 1.25rem / 1.25 var(--sans);
   --h3-weight: 700;
   --h3-letter-spacing: -0.015em;
   --h3-margin: 1rem;
   --button-font-size: 1.25rem;
+  --footer-nav-a-font-size: 1.25rem;
 }
 
 @media (min-width: 35em) {
@@ -70,6 +71,7 @@
     --h3-margin: 1rem;
 
     --button-font-size: 0.8rem;
+    --footer-nav-a-font-size: 1rem;
   }
 }
 
@@ -306,11 +308,16 @@ body {
   gap: 2rem;
   max-width: 30rem;
 }
+.section[data-section="3-4"] .contain,
+.section.team .contain {
+  max-width: var(--contain-max);
+}
 
 .section__media {
   max-width: 70%;
 }
 
+.section[data-section="2"] .section__media,
 .section[data-section="16"] .section__media {
   max-width: 100%;
 }
@@ -580,11 +587,19 @@ body {
 }
 
 .slick-prev {
-  left: -3.5rem;
+  left: -1rem;
 }
 .slick-next {
-  right: -3.5rem;
+  right: -1rem;
   transform: rotate(180deg);
+}
+@media (min-width: 46em) {
+  .slick-prev {
+    left: -3.5rem;
+  }
+  .slick-next {
+    right: -3.5rem;
+  }
 }
 
 .card {
@@ -640,7 +655,12 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 46em) {
+  .team-members {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .team-member {
@@ -952,6 +972,7 @@ div[class*=".aspect-"] {
 }
 
 .footer-menu a {
+  font-size: var(--footer-nav-a-font-size, 1rem);
   text-decoration: none;
 }
 .footer-menu a:hover,
