@@ -2,6 +2,7 @@
   --sans: "Montserrat", sans-serif;
   --color-black: #000;
   --color-white: #fff;
+  --color-white-hover: #63efb2;
   --gradient-horz: linear-gradient(90deg, #b0eae3 0%, #c9a1c6 100%);
   --contain-pad: 2rem;
   --contain-max: 100%;
@@ -301,6 +302,11 @@ body {
   margin-bottom: var(--body-margin);
   font-weight: var(--body-weight-bold);
   max-width: 20em;
+}
+
+.section__body p a:hover,
+.section__body p a:focus-visible {
+  color: var(--color-white-hover);
 }
 
 .section .contain {
@@ -975,9 +981,15 @@ div[class*=".aspect-"] {
   font-size: var(--footer-nav-a-font-size, 1rem);
   text-decoration: none;
 }
+
 .footer-menu a:hover,
 .footer-menu a:focus-visible {
   text-decoration: underline;
+}
+
+.footer-block p a:hover,
+.footer-block p a:focus-visible {
+  color: var(--color-white-hover);
 }
 
 .footer-social {
